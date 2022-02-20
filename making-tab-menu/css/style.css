@@ -1,0 +1,25 @@
+
+/* 1. 탭 메뉴 컨테이너의 넓이를 80%로 만들기 2. 가운데 배치 3. 높이 설정 */
+.tab-menu-container { 
+  width: 40%;
+  margin: auto;
+  border: 1px solid pink;
+  text-align: center;
+  height: 500px;
+  position: relative;
+}
+
+.tab-menu-title {
+  border: 1px solid blue;
+  padding: 10px;
+}
+
+.tab-menu-buttons {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border: 1px solid black;
+}
+
+
+
