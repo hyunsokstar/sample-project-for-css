@@ -1,25 +1,79 @@
-
-/* 1. 탭 메뉴 컨테이너의 넓이를 80%로 만들기 2. 가운데 배치 3. 높이 설정 */
-.tab-menu-container { 
-  width: 40%;
+.tab-menu-container {
+  width: 60%;
   margin: auto;
-  border: 1px solid pink;
   text-align: center;
-  height: 500px;
+  height: 560px;
   position: relative;
-}
-
-.tab-menu-title {
-  border: 1px solid blue;
-  padding: 10px;
-}
-
-.tab-menu-buttons {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   border: 1px solid black;
 }
 
+.tab-menu-title {
+  padding: 10px;
+  font-size: 40px;
+  border: 1px solid blue;
+  background-color: aliceblue;
+}
 
+.tab-menu-images {
+  padding-top: 20px;
+  width: 100%;
+  height: 80%;
+  border: 4px solid yellow;
+  box-sizing: border-box;
+  text-align: center;
+}
 
+.tab-menu-labels {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  /* 11 하단 영역에 패딩, vertical-align: 세로 정렬, 박스 사이징 추가 */
+  padding: 10px;
+  vertical-align: middle;
+  box-sizing: border-box; /* padding 으로 인한 전체 넓이 증가 방지 */
+  border: 2px solid black;
+}
+
+/* 22 input 숨기기 */
+input[name="tabmenu"] {
+  display: none;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.content img {
+  height: 400px;
+  box-sizing: border-box;
+  border: 4px solid black;
+}
+
+.tab-menu-labels label {
+  background-color: lightgray;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+input[id=tab1]:checked ~ .tab-menu-images > .slide1,
+input[id=tab2]:checked ~ .tab-menu-images > .slide2,
+input[id=tab3]:checked ~ .tab-menu-images > .slide3 {
+  opacity: 1;
+  visibility: visible;
+} 
+
+/* 라벨 클릭하면 체크 박스 체크 하고 라벨 색깔 변경 */
+input[id=tab1]:checked ~ .tab-menu-labels label[for=tab1],
+input[id=tab2]:checked ~ .tab-menu-labels label[for=tab2],
+input[id=tab3]:checked ~ .tab-menu-labels label[for=tab3] {
+  background-color: crimson;
+}

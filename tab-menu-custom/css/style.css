@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+.tab-menu-container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  height: 50vh;
+}
+
+.image-area {
+  box-sizing: border-box;
+  border: 1px solid black;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.article-area {
+  box-sizing: border-box;
+  width: 50%;
+}
+
+.label-area {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid blue;
+  height: 80px;
+}
+
+.tab-menu {
+  box-sizing: border-box;
+  border: 4px solid pink;
+  width: 100%;
+}
+
+.tab-labels{
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.tab-labels label {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: lightgray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slide {
+  box-sizing: border-box;
+  /* border: 4px solid purple; */
+  margin:auto;
+  height: 320px;
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+}
+
+.slide-inner {
+  width: 920px;
+  position: absolute;
+  box-sizing: border-box;
+  border: 0px solid orange;
+  font-size: 0;
+  transition: 0.5s;
+}
+
+.slide-inner img {
+  /* border: 1px solid yellow; */
+}
+
+input[id=tab1]:checked ~ .slide .slide-inner {
+  left: 0;
+  background-color: blue;
+}
+
+input[id=tab2]:checked ~ .slide .slide-inner {
+  left: -300px;
+}
+
+input[id=tab3]:checked ~ .slide .slide-inner {
+  left: -600px;
+}

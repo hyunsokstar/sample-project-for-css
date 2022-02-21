@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>이미지 탭 메뉴 만들기</title>
-  <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-  
-  <div class="tab-menu-container">
-      <div class = "tab-menu-title">Challenge For This Week</div>
-      <input type="radio" name="tabmenu" id="tab1">
-      <input type="radio" name="tabmenu" id="tab2">
-      <input type="radio" name="tabmenu" id="tab3">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 탭 메뉴 만들기</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="tab-menu-container">
+      <div class="tab-menu-title">Challenge For This Week</div>
+      
+      <input type="radio" name="tabmenu" id="tab1" checked />
+      <input type="radio" name="tabmenu" id="tab2" />
+      <input type="radio" name="tabmenu" id="tab3" />
 
-      <div class="tab-menu-buttons">
-        버튼 영역 
+      <div class="tab-menu-images">
+        <div class="content slide1">
+          <a href="#none1"><img src="./images/slide-01.jpg" /></a>
+        </div>
+        <div class="content slide2">
+          <a href="#none2"><img src="./images/slide-02.jpg" /></a>
+        </div>
+        <div class="content slide3">
+          <a href="#none3"><img src="./images/slide-03.jpg" /></a>
+        </div>
       </div>
 
-  </div>
-
-
-</body>
+      <div class="tab-menu-labels">
+        <label for="tab1"></label>
+        <label for="tab2"></label>
+        <label for="tab3"></label>
+      </div>
+    </div>
+  </body>
 </html>
