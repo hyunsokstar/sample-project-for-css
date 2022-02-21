@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+input[name=tabmenu] {
+  display: none;
+}
+
 .tab-menu-container {
   box-sizing: border-box;
   display: flex;
@@ -86,4 +90,10 @@ input[id=tab2]:checked ~ .slide .slide-inner {
 
 input[id=tab3]:checked ~ .slide .slide-inner {
   left: -600px;
+}
+
+input[id=tab1]:checked ~ .tab-labels label[for=tab1],
+input[id=tab2]:checked ~ .tab-labels label[for=tab2],
+input[id=tab3]:checked ~ .tab-labels label[for=tab3] {
+  background-color: crimson;
 }
